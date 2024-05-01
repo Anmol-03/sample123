@@ -1,0 +1,172 @@
+1st code
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(13,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(13,HIGH);
+delay(10);
+digitalWrite(13,LOW);
+delay(10);
+}
+
+
+
+2nd code
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(13,OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(11,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(13,HIGH);
+delay(50);
+digitalWrite(13,LOW);
+delay(50);
+digitalWrite(12,HIGH);
+delay(100);
+digitalWrite(12,LOW);
+delay(100);
+digitalWrite(11,HIGH);
+delay(150);
+digitalWrite(11,LOW);
+delay(150);
+}
+
+
+
+code 3 
+
+
+int LED_Pin =9;
+int duty_cycle = 1;
+
+void setup(){
+pinMode(LED_Pin,OUTPUT);
+serial.begin(9600)
+{
+void loop(){
+while(duty_cycle_value<255)
+{
+analog Write(LED_Pin,duty_cycle_value);
+delay(500);
+duty_cycle_value++
+Serial.println(duty_cycle_value);
+{
+}
+
+
+3) 
+int LED_Pin = 6;
+int duty_cycle_value = 1;
+
+void setup() {
+  pinMode(LED_Pin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  while (duty_cycle_value < 255) {
+    analogWrite(LED_Pin, duty_cycle_value);
+    delay(1500);
+    duty_cycle_value++;
+    Serial.println(duty_cycle_value);
+  }
+}
+
+
+4th code
+
+4 )
+
+
+
+//set pin numbers
+//const   won't change
+const int ledPin = 12;   //the number of the LED pin
+const int   ldrPin = A0;  //the number of the LDR pin
+
+
+void setup() {
+
+  Serial.begin(9600);
+   pinMode(ledPin, OUTPUT);  //initialize the LED pin as an output
+  pinMode(ldrPin,   INPUT);   //initialize the LDR pin as an input
+}
+
+void loop() {
+  int   ldrStatus = analogRead(ldrPin);   //read the status of the LDR value
+
+  //check   if the LDR status is <= 500
+  //if it is, the LED is HIGH
+Serial.println(ldrStatus);
+
+   if (ldrStatus <=80) {
+
+    digitalWrite(ledPin,   HIGH);               //turn LED on
+
+   }
+  else {
+
+    digitalWrite(ledPin,   LOW);          //turn LED off
+  }
+}
+
+
+5th code 
+
+5)
+
+// Pin configurations
+const int pirPin = 2; // PIR sensor output pin
+const int ledPin = 13; // LED pin
+
+void setup() {
+  pinMode(pirPin, INPUT); // PIR sensor pin as input
+  pinMode(ledPin, OUTPUT); // LED pin as output
+  Serial.begin(9600); // Initialize serial communication
+}
+
+void loop() {
+  int pirState = digitalRead(pirPin); // Read PIR sensor state
+
+  if (pirState == HIGH) { // If motion detected
+    digitalWrite(ledPin, HIGH); // Turn on LED
+    Serial.println("Motion detected!");
+    delay(1000); // Wait for a second
+  } else {
+    digitalWrite(ledPin, LOW); // Turn off LED
+  }
+}
+
+
+
+6th code
+
+6)
+#include<Servo.h>
+Servo myservo;
+int pos = 0;
+void setup() {
+  myservo.attach(2);
+}
+
+void loop() {
+  for(pos = 0; pos<=45; pos++){
+    myservo.write(pos);
+    delay(15);
+  }
+  for(pos=45;pos>=0;pos--){
+    myservo.write(pos);
+    delay(5);
+  }
+}
