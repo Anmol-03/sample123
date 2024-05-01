@@ -1,4 +1,4 @@
-1st code
+1st code // blink an led 
 
 void setup() {
   // put your setup code here, to run once:
@@ -16,7 +16,7 @@ delay(10);
 
 
 
-2nd code
+2nd code  // chaser led
 
 void setup() {
   // put your setup code here, to run once:
@@ -65,7 +65,7 @@ Serial.println(duty_cycle_value);
 }
 
 
-3) 
+3)  // brightness control
 int LED_Pin = 6;
 int duty_cycle_value = 1;
 
@@ -84,7 +84,7 @@ void loop() {
 }
 
 
-4th code
+4th code  // street light controller 
 
 4 )
 
@@ -122,7 +122,7 @@ Serial.println(ldrStatus);
 }
 
 
-5th code 
+5th code     // staircase lighting
 
 5)
 
@@ -150,7 +150,7 @@ void loop() {
 
 
 
-6th code
+6th code       // Servo Motor 
 
 6)
 #include<Servo.h>
